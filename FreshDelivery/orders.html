@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshDelivery - My Orders</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .header, .footer { background-color: #c8f6f7; color: rgb(4, 0, 0); text-align: center; padding: 10px 0; }
+        .header { position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .header nav { display: flex; justify-content: center; gap: 20px; }
+        .section { padding: 20px; margin-top: 60px; }
+        .footer { padding: 20px; position: fixed; width: 100%; bottom: 0; z-index: 1000; }
+        .order { margin-bottom: 20px; border: 1px solid #ddd; padding: 10px; }
+        .order h3 { margin-top: 0; }
+        .order ul { list-style-type: none; margin: 0; padding: 0; }
+        .order ul li { margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <h1>FreshDelivery</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="orders.html">My Orders</a>
+            <a href="catalog.html">Catalogue</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+
+    <div class="section">
+        <br>
+                <br>
+                <br>
+                <br>
+                <br>
+               
+        <h2>My Orders</h2>
+        
+        <div class="order">
+            <h3>Order #1</h3>
+            <ul>
+                <li>Items:
+                    <ul>
+                        <li>Chicken</li>
+                        <li>Apples</li>
+                    </ul>
+                </li>
+                <li>Status: Delivered</li>
+            </ul>
+        </div>
+        
+        <div class="order">
+            <h3>Order #2</h3>
+            <ul>
+                <li>Items:
+                    <ul>
+                        <li>Carrot</li>
+                        <li>Onions</li>
+                    </ul>
+                </li>
+                <li>Status: In transit</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 FreshDelivery. All rights reserved.</p>
+    </div>
+</body>
+</html>

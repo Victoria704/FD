@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshDelivery - Contact</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .header, .footer { background-color: #c8f6f7; color: rgb(4, 0, 0); text-align: center; padding: 10px 0; }
+        .header { position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .header nav { display: flex; justify-content: center; gap: 20px; }
+        .section { padding: 20px; margin-top: 60px; }
+        .footer { padding: 20px; position: fixed; width: 100%; bottom: 0; z-index: 1000; }
+        .table-container { margin-top: 20px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <h1>FreshDelivery</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="orders.html">My Orders</a>
+            <a href="catalog.html">Catalogue</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+    <div class="section">
+        <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+        <h2>Contact Us</h2>
+        <p>You can reach us at <a href="mailto:support@freshdelivery.com">support@freshdelivery.com</a> or call us at <a href="tel:1234567890">123-456-7890</a>.</p>
+        
+        <h3>For Suppliers</h3>
+        <p>Interested in becoming a supplier? Contact us for more information.</p>
+        
+        <h3>Terms of Cooperation</h3>
+        <p>We offer competitive terms for our suppliers. Contact us to discuss partnership opportunities.</p>
+        
+        <div class="table-container">
+            <h3>Request Form</h3>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <td><input type="text" id="name"></td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td><input type="email" id="email"></td>
+                </tr>
+                <tr>
+                    <th>Company</th>
+                    <td><input type="text" id="company"></td>
+                </tr>
+                <tr>
+                    <th>Message</th>
+                    <td><textarea id="message" rows="4"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button onclick="submitForm()">Submit</button></td>
+                </tr>
+            </table>
+        </div>
+        
+        <h3>Registration Instructions</h3>
+        <p>Register your products with us following these steps:</p>
+        <ol>
+            <li>Step 1: Prepare necessary documents.</li>
+            <li>Step 2: Fill out the registration form.</li>
+            <li>Step 3: Submit the form and documents to <a href="mailto:support@freshdelivery.com">support@freshdelivery.com</a>.</li>
+            <li>Step 4: Await confirmation and approval.</li>
+        </ol>
+    </div>
+    <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+    <div class="footer">
+        <p>&copy; 2023 FreshDelivery. All rights reserved.</p>
+    </div>
+    
+    <script>
+        function submitForm() {
+            // Example function for handling form submission (you can implement backend processing here)
+            alert("Form submitted!"); // Replace with actual form submission logic
+        }
+    </script>
+</body>
+</html>
