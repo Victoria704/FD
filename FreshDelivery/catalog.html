@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreshDelivery - Catalogue</title>
+    <title>FreshDelivery - Reviews</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
         .header, .footer { background-color: #c8f6f7; color: rgb(4, 0, 0); text-align: center; padding: 10px 0; }
@@ -16,13 +16,14 @@
             left: 0;
             top: 60px; /* Adjust for header height */
             bottom: 60px; /* Adjust for footer height */
-            width: 200px;
+            width: 180px;
             background-color: #c8f6f77f;
             padding: 20px;
             overflow-y: auto;
         }
         .sidebar h2 {
             margin-top: 0;
+            color: #333;
         }
         .sidebar a {
             display: block;
@@ -32,7 +33,7 @@
             border-bottom: 1px solid #c8f6f7;
         }
         .sidebar a:hover {
-            background-color: #c8f6f7;
+            background-color: #c2f3f3;
         }
         /* Main content styles */
         .main-content {
@@ -62,7 +63,83 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        .review-section {
+            margin-top: 40px;
+        }
+        .review-section h2 {
+            margin-bottom: 10px;
+        }
+        .review {
+            border: 1px solid #000000;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+        }
     </style>
+    <script>
+        function showReviews(product) {
+            const reviews = {
+                "beef": [
+                    "Beef is always fresh and tender. Highly recommended! - John D.",
+                    "Great quality beef, perfect for grilling. - Sarah M."
+                ],
+                "chicken": [
+                    "The chicken is always fresh and delicious. - Emily K.",
+                    "Affordable and high-quality chicken. Will buy again. - Robert T."
+                ],
+                "pork": [
+                    "Pork is excellent and very tasty. - Anna P.",
+                    "Best pork I've ever had, really good quality. - Michael B."
+                ],
+                "apples": [
+                    "Crisp and sweet apples. Perfect for snacks. - Laura G.",
+                    "Always fresh and juicy. My kids love them. - David H."
+                ],
+                "bananas": [
+                    "Ripe and tasty bananas, just the right amount of sweetness. - Sophia L.",
+                    "Great for smoothies and snacks. - Ethan W."
+                ],
+                "oranges": [
+                    "Oranges are always fresh and juicy. - Olivia C.",
+                    "Perfect for making fresh orange juice. - James N."
+                ],
+                "carrots": [
+                    "Fresh and crunchy carrots. Great for salads. - Isabella A.",
+                    "Good quality and affordable price. - Daniel S."
+                ],
+                "tomatoes": [
+                    "Juicy and flavorful tomatoes. - Mia P.",
+                    "Perfect for salads and sandwiches. - Lucas R."
+                ],
+                "onions": [
+                    "Fresh onions with a nice crunch. - Amelia B.",
+                    "Great for cooking, very fresh. - Logan E."
+                ],
+                "milk": [
+                    "Milk is always fresh and creamy. - Grace F.",
+                    "Best milk I've found. Great quality. - William G."
+                ],
+                "cheese": [
+                    "Delicious and creamy cheese. - Chloe H.",
+                    "High-quality cheese, perfect for sandwiches. - Mason J."
+                ],
+                "yogurt": [
+                    "Yogurt is smooth and tasty. - Harper I.",
+                    "Great for breakfast, very fresh. - Benjamin K."
+                ]
+            };
+            let reviewHtml = '';
+            if (reviews[product]) {
+                reviews[product].forEach(review => {
+                    reviewHtml += `<div class="review">${review}</div>`;
+                });
+            } else {
+                reviewHtml = '<div class="review">No reviews yet.</div>';
+            }
+            document.getElementById('reviews').innerHTML = reviewHtml;
+        }
+    </script>
 </head>
 <body>
     <div class="header">
@@ -74,9 +151,11 @@
             <a href="orders.html">My Orders</a>
             <a href="catalog.html">Catalogue</a>
             <a href="contact.html">Contact</a>
+            <a href="feedback.html">Reviews</a>
         </nav>
     </div>
     <div class="sidebar">
+        <br><br><br>
         <h2>Categories</h2>
         <a href="#meat">Meat</a>
         <a href="#fruits">Fruits</a>
@@ -85,28 +164,21 @@
     </div>
     <div class="main-content">
         <div id="meat" class="products">
-            <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
+            <br><br><br><br><br><br><br><br>
             <h2>Meat</h2>
-            <div class="product">
+            <div class="product" onclick="showReviews('beef')">
                 <img src="beef.png" alt="Beef" width="600">
                 <p>Beef</p>
                 <p>$10/lb</p>
                 <a href="#" class="add-to-cart">Add to Cart</a>
             </div>
-            <div class="product">
+            <div class="product" onclick="showReviews('chicken')">
                 <img src="chicken.png" alt="Chicken" width="600">
                 <p>Chicken</p>
                 <p>$8/lb</p>
                 <a href="#" class="add-to-cart">Add to Cart</a>
             </div>
-            <div class="product">
+            <div class="product" onclick="showReviews('pork')">
                 <img src="pork.png" alt="Pork" width="600">
                 <p>Pork</p>
                 <p>$9/lb</p>
@@ -114,28 +186,21 @@
             </div>
         </div>
         <div id="fruits" class="products">
-            <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
+            <br><br><br><br><br><br><br><br>
             <h2>Fruits</h2>
-            <div class="product">
+            <div class="product" onclick="showReviews('apples')">
                 <img src="apple.png" alt="Apples" width="600">
                 <p>Apples</p>
                 <p>$2/lb</p>
                 <a href="#" class="add-to-cart">Add to Cart</a>
             </div>
-            <div class="product">
+            <div class="product" onclick="showReviews('bananas')">
                 <img src="banana.png" alt="Bananas" width="600">
                 <p>Bananas</p>
                 <p>$1/lb</p>
                 <a href="#" class="add-to-cart">Add to Cart</a>
             </div>
-            <div class="product">
+            <div class="product" onclick="showReviews('oranges')">
                 <img src="orange.png" alt="Oranges" width="600">
                 <p>Oranges</p>
                 <p>$3/lb</p>
@@ -143,28 +208,21 @@
             </div>
         </div>
         <div id="vegetables" class="products">
-            <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
+            <br><br><br><br><br><br><br><br>
             <h2>Vegetables</h2>
-            <div class="product">
+            <div class="product" onclick="showReviews('carrots')">
                 <img src="carrot.png" alt="Carrots" width="600">
                 <p>Carrots</p>
                 <p>$1/lb</p>
                 <a href="#" class="add-to-cart">Add to Cart</a>
             </div>
-            <div class="product">
+            <div class="product" onclick="showReviews('tomatoes')">
                 <img src="tomato.png" alt="Tomatoes" width="600">
                 <p>Tomatoes</p>
                 <p>$3/lb</p>
                 <a href="#" class="add-to-cart">Add to Cart</a>
             </div>
-            <div class="product">
+            <div class="product" onclick="showReviews('onions')">
                 <img src="onion.png" alt="Onions" width="600">
                 <p>Onions</p>
                 <p>$2/lb</p>
@@ -172,45 +230,38 @@
             </div>
         </div>
         <div id="dairy" class="products">
-            <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
+            <br><br><br><br><br><br><br><br>
             <h2>Dairy</h2>
-            <div class="product">
+            <div class="product" onclick="showReviews('milk')">
                 <img src="milk.png" alt="Milk" width="600">
                 <p>Milk</p>
                 <p>$3/gallon</p>
                 <a href="#" class="add-to-cart">Add to Cart</a>
             </div>
-            <div class="product">
+            <div class="product" onclick="showReviews('cheese')">
                 <img src="cheese.png" alt="Cheese" width="600">
                 <p>Cheese</p>
                 <p>$8/lb</p>
                 <a href="#" class="add-to-cart">Add to Cart</a>
             </div>
-            <div class="product">
+            <div class="product" onclick="showReviews('yogurt')">
                 <img src="yougurt.png" alt="Yogurt" width="600">
                 <p>Yogurt</p>
                 <p>$2/cup</p>
                 <a href="#" class="add-to-cart">Add to Cart</a>
             </div>
         </div>
+        <div class="review-section">
+            <h2>Product Reviews</h2>
+            <div id="reviews">Click on a product to see reviews.</div>
+        </div>
     </div>
-    <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
     <div class="footer">
         <p>&copy; 2023 FreshDelivery. All rights reserved.</p>
     </div>
 </body>
 </html>
+
+
+
+
