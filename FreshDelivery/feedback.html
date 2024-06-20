@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshDelivery - Reviews</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header, .footer {
+            background-color: #c8f6f7db;
+            color: #000;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .header nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .footer {
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            z-index: 1000;
+        }
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 60px;
+            bottom: 60px;
+            width: 180px;
+            background-color: #c7e1e141;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .sidebar h2 {
+            margin-top: 0;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            border-bottom: 1px solid #c8f6f7;
+        }
+        .sidebar a:hover {
+            background-color: #c8f6f7;
+        }
+        .main-content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+        .reviews-section {
+            margin-top: 40px;
+        }
+        .reviews-section h2 {
+            margin-bottom: 20px;
+        }
+        .review {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <h1>FreshDelivery</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="orders.html">My Orders</a>
+            <a href="catalog.html">Catalogue</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+    <div class="sidebar">
+        <br><br><br><br><br><br>
+        <h2>Categories</h2>
+        <a href="#company-reviews">Company Reviews</a>
+        <a href="#product-reviews">Product Reviews</a>
+    </div>
+    <div class="main-content">
+        <div id="company-reviews" class="reviews-section">
+            <br><br><br><br><br><br>
+            <h2>Company Reviews</h2>
+            <div class="review">
+                FreshDelivery provides excellent service and quality products. - Jessica L.
+            </div>
+            <div class="review">
+                Great customer support and fast delivery. Highly recommend! - Mark R.
+            </div>
+            <div class="review">
+                I have been a loyal customer for years. FreshDelivery never disappoints. - Amanda S.
+            </div>
+        </div>
+        <div id="product-reviews" class="reviews-section">
+            <br><br><br><br><br><br>
+            <h2>Product Reviews</h2>
+            <h3>Beef</h3>
+            <div class="review">
+                Beef is always fresh and tender. Highly recommended! - John D.
+            </div>
+            <div class="review">
+                Great quality beef, perfect for grilling. - Sarah M.
+            </div>
+            <h3>Chicken</h3>
+            <div class="review">
+                The chicken is always fresh and delicious. - Emily K.
+            </div>
+            <div class="review">
+                Affordable and high-quality chicken. Will buy again. - Robert T.
+            </div>
+            <h3>Pork</h3>
+            <div class="review">
+                Pork is excellent and very tasty. - Anna P.
+            </div>
+            <div class="review">
+                Best pork I've ever had, really good quality. - Michael B.
+            </div>
+            <!-- Add more product reviews here -->
+        </div>
+    </div>
+    <br><br><br><br><br><br>
+    <div class="footer">
+        <p>&copy; 2023 FreshDelivery. All rights reserved.</p>
+    </div>
+</body>
+</html>
